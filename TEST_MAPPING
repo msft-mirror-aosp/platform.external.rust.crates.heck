@@ -7,10 +7,6 @@
     },
     {
       "name": "heck_device_test_src_lib"
-    },
-    {
-      "host": true,
-      "name": "structopt-derive_host_test_src_lib"
     }
   ]
 }
