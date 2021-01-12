@@ -6,7 +6,7 @@ rust_defaults {
     srcs: ["src/lib.rs"],
     test_suites: ["general-tests"],
     auto_gen_config: true,
-    edition: "2015",
+    edition: "2018",
     rustlibs: [
         "libunicode_segmentation",
     ],
@@ -27,11 +27,11 @@ rust_library {
     host_supported: true,
     crate_name: "heck",
     srcs: ["src/lib.rs"],
-    edition: "2015",
+    edition: "2018",
     rustlibs: [
         "libunicode_segmentation",
     ],
 }
 
 // dependent_library ["feature_list"]
-//   unicode-segmentation-1.6.0
+//   unicode-segmentation-1.7.1
