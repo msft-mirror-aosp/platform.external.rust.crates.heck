@@ -2,10 +2,6 @@
 {
   "presubmit": [
     {
-      "host": true,
-      "name": "heck_host_test_src_lib"
-    },
-    {
       "name": "heck_device_test_src_lib"
     }
   ]
