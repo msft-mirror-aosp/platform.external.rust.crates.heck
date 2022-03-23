@@ -20,17 +20,10 @@ pub trait MixedCase: ToOwned {
 
 impl MixedCase for str {
     fn to_mixed_case(&self) -> String {
-        transform(
-            self,
-            |s, out| {
-                if out.is_empty() {
-                    lowercase(s, out);
-                } else {
-                    capitalize(s, out)
-                }
-            },
-            |_| {},
-        )
+        transform(self, |s, out| {
+            if out.is_empty() { lowercase(s, out); }
+            else { capitalize(s, out) }
+        }, |_| {})
     }
 }
 
@@ -44,7 +37,7 @@ mod tests {
             fn $t() {
                 assert_eq!($s1.to_mixed_case(), $s2)
             }
-        };
+        }
     }
 
     t!(test1: "CamelCase" => "camelCase");
