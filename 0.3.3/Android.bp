@@ -2,7 +2,7 @@
 // Do not modify this file as changes will be overridden on upgrade.
 
 package {
-    default_applicable_licenses: ["external_rust_crates_heck_license"],
+    default_applicable_licenses: ["external_rust_crates_heck_license_0_3_3"],
 }
 
 // Added automatically by a large-scale-change that took the approach of
@@ -25,7 +25,7 @@ package {
 // Please consider removing redundant or irrelevant files from 'license_text:'.
 // See: http://go/android-license-faq
 license {
-    name: "external_rust_crates_heck_license",
+    name: "external_rust_crates_heck_license_0_3_3",
     visibility: [":__subpackages__"],
     license_kinds: [
         "SPDX-license-identifier-Apache-2.0",
@@ -38,11 +38,11 @@ license {
 }
 
 rust_test {
-    name: "heck_test_src_lib",
+    name: "heck_test_src_lib_deprecated",
     host_supported: true,
     crate_name: "heck",
     cargo_env_compat: true,
-    cargo_pkg_version: "0.4.1",
+    cargo_pkg_version: "0.3.3",
     srcs: ["src/lib.rs"],
     test_suites: ["general-tests"],
     auto_gen_config: true,
@@ -50,34 +50,20 @@ rust_test {
         unit_test: true,
     },
     edition: "2018",
-    features: [
-        "unicode",
-        "unicode-segmentation",
-    ],
     rustlibs: [
         "libunicode_segmentation",
     ],
 }
 
 rust_library {
-    name: "libheck",
+    name: "libheck_deprecated",
     host_supported: true,
     crate_name: "heck",
     cargo_env_compat: true,
-    cargo_pkg_version: "0.4.1",
+    cargo_pkg_version: "0.3.3",
     srcs: ["src/lib.rs"],
     edition: "2018",
-    features: [
-        "unicode",
-        "unicode-segmentation",
-    ],
     rustlibs: [
         "libunicode_segmentation",
     ],
-    apex_available: [
-        "//apex_available:platform",
-        "//apex_available:anyapex",
-    ],
-    product_available: true,
-    vendor_available: true,
 }
