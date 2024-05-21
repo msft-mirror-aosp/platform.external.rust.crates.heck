@@ -45,7 +45,7 @@ rust_test {
     crate_name: "heck",
     cargo_env_compat: true,
     cargo_pkg_version: "0.3.3",
-    srcs: ["src/lib.rs"],
+    crate_root: "src/lib.rs",
     test_suites: ["general-tests"],
     auto_gen_config: true,
     test_options: {
@@ -61,7 +61,7 @@ rust_library {
     crate_name: "heck",
     cargo_env_compat: true,
     cargo_pkg_version: "0.3.3",
-    srcs: ["src/lib.rs"],
+    crate_root: "src/lib.rs",
     edition: "2018",
     rustlibs: ["libunicode_segmentation"],
     product_available: true,
