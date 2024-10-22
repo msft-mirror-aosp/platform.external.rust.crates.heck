@@ -2,7 +2,8 @@
   "apex_available": [],
   "module_name_overrides": {
     "heck_test_src_lib": "heck_test_src_lib_deprecated",
-    "libheck": "libheck_deprecated"
+    "libheck": "libheck_deprecated",
+    "external_rust_crates_heck_license": "external_rust_crates_heck-0.3.3_license"
   },
   "run_cargo": false,
   "tests": true
